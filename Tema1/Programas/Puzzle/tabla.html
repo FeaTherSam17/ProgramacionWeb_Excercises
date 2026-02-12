@@ -2,11 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<table>
- 
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompecabezas</title>
+    <style>        
+       img{            
+            display: block; /*Propiedad aplicada a todas las imagenes que las convierte en un bloque y ocupa todo el espacio
+            Eliminando los espacios en blanco
+            */
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Rompecabezas</h1>
+    <table cellpadding="0" cellspacing="0" > <!--Se eliminan los espacios entre las celdas y el padding-->
+        <tbody>
+
+            <!--Armando la imagen de forma provisional podemos obseervar
+            que se pude dividir la primera sección en 2 filas
+            los primeros 2 fragmentos de la imagen tienen el tamaño suficiente para abarcar 2 filas
+            sin embargo en la ultima sección solo cabe la mitad de esta, por lo que se configuran las primeras dos secciones
+            para ocupar o espacios y la última uno-->
+            
+            <tr><!--Fila 1-->
+                <td rowspan="2"><img src="sectores/sector1.jpg"></td>
+                <td rowspan="2"><img src="sectores/sector5.jpg"></td>
+                <td><img src="sectores/sector16.jpg" ></td>
+            </tr>
+            <!--Se agrega la segunda fila, en esta se encuentra un elemento que completa la seccion de la imagen 
+            del último recuadro, pues es el espacio que sobra-->
+            <tr><!--Fila 2-->
+                <td><img src="sectores/sector17.jpg"></td>                              
+               <!-- <td><img src="sectores/sector16.jpg" ></td>  -->
+            </tr>
+            
+            <!--en la segunda sección, nuevamente podemos dividirla en 2 filas-->
+            <tr>      <!--Fila 1-->          
+                <!--La primera imagen de esta sección tiene el tamaño suficiente para ocupar 2 filas-->
+                <td rowspan="2"><img src="sectores/sector2.jpg"></td>                
+                <td><img src="sectores/sector12.jpg"></td>                
+                <td><img src="sectores/sector13.jpg"></td>
+            </tr>
+
+            <!--En esta otra fila hay una imagen con longitud de dos columnas por loo que su distribución será
+            de colspan-->
+            <tr>  <!--Fila 2-->
+                <td colspan="2"><img src="sectores/sector11.jpg"></td>
+            </tr>
+
+            <!--En la última sección, la distribución es de 3 filas, debido al tamaño de la primera imagen.-->
+                
+            <tr><!--Fila 1-->
+                <td rowspan="3"><img src="sectores/sector3.jpg"></td> <!--La primera imagen de esta sección tiene el tamaño suficiente para ocupar 3 filas-->
+                <td rowspan="2"><img src="sectores/sector6.jpg"></td> <!--La segunda imagen tiene el tamaño de 2 filas-->
+                <td><img src="sectores/sector14.jpg"></td> <!--La tercera imagen tiene el tamaño de 1 fila-->                
+            </tr>
+
+            <tr><!--Fila 2-->                                
+                <td><img src="sectores/sector15.jpg"></td>                
+            </tr>                   
+            
+            
+            <tr><!--Fila 3-->
+                <td><img src="sectores/sector8.jpg"></td>                                 
+                <td><img src="sectores/sector10.jpg"></td>                
+            </tr>                  
+            
+        </tbody>
+    </table>
 </body>
 </html>
